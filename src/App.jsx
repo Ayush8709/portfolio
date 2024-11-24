@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 // Create a Default Page (404) to show when no routes match
 const NotFound = () => {
   return (
-    <div>
+    <div style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <h2>404 - Page Not Found</h2>
     </div>
   );
@@ -19,17 +19,17 @@ const NotFound = () => {
 const App = () => {
   return (
     <Router>
-        <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/car-rental" element={<CarRental />} />
-        <Route path="/coffee-shop" element={<CoffeShop />} />
+        <Route path="/carrental" element={<CarRental />} />
+        <Route path="/coffeeshop" element={<CoffeShop />} />
         <Route path="/restaurant" element={<Resturant />} />
 
         {/* Add a catch-all route for unmatched paths (default page or 404) */}
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };

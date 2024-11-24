@@ -5,7 +5,6 @@ const App = () => {
 
     return (
         <div>
-            <body>
 
                 {/* this is header section */}
                 
@@ -23,52 +22,52 @@ const App = () => {
                             <a href="./#projects" className="btn btn--bg" onClick={() => handleMenuLinkClick('projects')}>Projects</a>
                         </div>
                     </div>
-                    <div class="home-hero__socials">
-                        <div class="home-hero__social">
-                            <a href="#" class="home-hero__social-icon-link">
+                    <div className="home-hero__socials">
+                        <div className="home-hero__social">
+                            <a href="#" className="home-hero__social-icon-link">
                                 <img
                                     src="./assets/png/linkedin-ico.png"
                                     alt="icon"
-                                    class="home-hero__social-icon"
+                                    className="home-hero__social-icon"
                                 />
                             </a>
                         </div>
-                        <div class="home-hero__social">
-                            <a href="https://github.com/Ayush8709" class="home-hero__social-icon-link">
+                        <div className="home-hero__social">
+                            <a href="https://github.com/Ayush8709" className="home-hero__social-icon-link">
                                 <img
                                     src="./assets/png/github-ico.png"
                                     alt="icon"
-                                    class="home-hero__social-icon"
+                                    className="home-hero__social-icon"
                                 />
                             </a>
                         </div>
-                        <div class="home-hero__social">
-                            <a href="#" class="home-hero__social-icon-link">
+                        <div className="home-hero__social">
+                            <a href="#" className="home-hero__social-icon-link">
                                 <img
                                     src="./assets/png/email.png"
                                     alt="icon"
-                                    class="home-hero__social-icon"
+                                    className="home-hero__social-icon"
                                 />
                             </a>
                         </div>
-                        <div class="home-hero__social">
-                            <a href="#" class="home-hero__social-icon-link">
+                        <div className="home-hero__social">
+                            <a href="#" className="home-hero__social-icon-link">
                                 <img
                                     src="./assets/png/yt-ico.png"
                                     alt="icon"
-                                    class="home-hero__social-icon"
+                                    className="home-hero__social-icon"
                                 />
                             </a>
                         </div>
-                        <div class="home-hero__social">
+                        <div className="home-hero__social">
                             <a
                                 href="#"
-                                class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
+                                className="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
                             >
                                 <img
                                     src="./assets/png/insta-ico.png"
                                     alt="icon"
-                                    class="home-hero__social-icon"
+                                    className="home-hero__social-icon"
                                 />
                             </a>
                         </div>
@@ -131,55 +130,55 @@ const App = () => {
 
                 </section>
 
-                <section id="projects" class="projects sec-pad">
+                <section id="projects" className="projects sec-pad">
                     <Projects />
                 </section>
 
-                <section id="contact" class="contact sec-pad dynamicBg">
-                    <div class="main-container">
-                        <h2 class="heading heading-sec heading-sec__mb-med">
-                            <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-                            <span class="heading-sec__sub heading-sec__sub--lt">
+                <section id="contact" className="contact sec-pad dynamicBg">
+                    <div className="main-container">
+                        <h2 className="heading heading-sec heading-sec__mb-med">
+                            <span className="heading-sec__main heading-sec__main--lt">Contact</span>
+                            <span className="heading-sec__sub heading-sec__sub--lt">
                                 Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
                             </span>
                         </h2>
-                        <div class="contact__form-container">
-                            <form action="#" class="contact__form">
-                                <div class="contact__form-field">
-                                    <label class="contact__form-label" for="name">Name</label>
+                        <div className="contact__form-container">
+                            <form action="#" className="contact__form">
+                                <div className="contact__form-field">
+                                    <label className="contact__form-label" htmlFor="name">Name</label>
                                     <input
                                         required
                                         placeholder="Enter Your Name"
                                         type="text"
-                                        class="contact__form-input"
+                                        className="contact__form-input"
                                         name="name"
                                         id="name"
                                     />
                                 </div>
-                                <div class="contact__form-field">
-                                    <label class="contact__form-label" for="email">Email</label>
+                                <div className="contact__form-field">
+                                    <label className="contact__form-label" htmlFor="email">Email</label>
                                     <input
                                         required
                                         placeholder="Enter Your Email"
                                         type="text"
-                                        class="contact__form-input"
+                                        className="contact__form-input"
                                         name="email"
                                         id="email"
                                     />
                                 </div>
-                                <div class="contact__form-field">
-                                    <label class="contact__form-label" for="message">Message</label>
+                                <div className="contact__form-field">
+                                    <label className="contact__form-label" htmlFor="message">Message</label>
                                     <textarea
                                         required
                                         cols="30"
                                         rows="10"
-                                        class="contact__form-input"
+                                        className="contact__form-input"
                                         placeholder="Enter Your Message"
                                         name="message"
                                         id="message"
                                     ></textarea>
                                 </div>
-                                <button type="submit" class="btn btn--theme contact__btn">
+                                <button type="submit" className="btn btn--theme contact__btn">
                                     Submit
                                 </button>
                             </form>
@@ -189,7 +188,6 @@ const App = () => {
 
                 
 
-            </body>
         </div>
     );
 }
