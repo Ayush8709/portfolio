@@ -1,6 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+//screen ke top par scroll karne ke liye function hai
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
+};
+
 const Projects = () => {
     return (
         <>
@@ -30,6 +38,7 @@ const Projects = () => {
                             <Link
                                 to="/carrental"
                                 className="btn btn--med btn--theme dynamicBgClr"
+                                onClick={scrollToTop}
                             >
                                 Case Study
                             </Link>
@@ -52,6 +61,7 @@ const Projects = () => {
                             <Link
                                 to="/coffeeshop"
                                 className="btn btn--med btn--theme dynamicBgClr"
+                                onClick={scrollToTop}
                             >
                                 Case Study
                             </Link>
@@ -74,6 +84,7 @@ const Projects = () => {
                             <Link
                                 to="/ecommerce"
                                 className="btn btn--med btn--theme dynamicBgClr"
+                                onClick={scrollToTop}
                             >
                                 Case Study
                             </Link>
@@ -96,6 +107,7 @@ const Projects = () => {
                             <Link
                                 to="/restaurant"
                                 className="btn btn--med btn--theme dynamicBgClr"
+                                onClick={scrollToTop}
                             >
                                 Case Study
                             </Link>
