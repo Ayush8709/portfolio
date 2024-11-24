@@ -7,7 +7,6 @@ const CarRental = () => {
     })
     return (
         <div>
-            <body>
                 <Navbar />
                 <section className="project-cs-hero">
                     <div className="project-cs-hero__content">
@@ -81,7 +80,6 @@ const CarRental = () => {
                 </section>
 
 
-            </body>
         </div>
     )
 }
