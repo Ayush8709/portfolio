@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
     return (
@@ -26,12 +27,12 @@ const Projects = () => {
                             <p className="projects__row-content-desc">
                                 Built a car rental website with MERN stack that lets users book vehicles in real-time with secure authentication and payment processing. Implemented responsive design and advanced search filters, leading to 45% increase in bookings and 35% boost in mobile engagement.
                             </p>
-                            <a
-                                href="/carrental"
+                            <Link
+                                to="/carrental"
                                 className="btn btn--med btn--theme dynamicBgClr"
-
-                            >Case Study</a
                             >
+                                Case Study
+                            </Link>
                         </div>
                     </div>
                     <div className="projects__row">
@@ -48,11 +49,12 @@ const Projects = () => {
                             <p className="projects__row-content-desc">
                                 Developed a coffee shop platform using MERN stack featuring real-time ordering, customizable menus, and secure Stripe payments. Implemented responsive design and loyalty rewards program, leading to 75% increase in mobile orders and 40% improved customer retention.
                             </p>
-                            <a
-                                href="/coffeeshop"
+                            <Link
+                                to="/coffeeshop"
                                 className="btn btn--med btn--theme dynamicBgClr"
-                            >Case Study</a
                             >
+                                Case Study
+                            </Link>
                         </div>
                     </div>
                     <div className="projects__row">
@@ -69,11 +71,12 @@ const Projects = () => {
                             <p className="projects__row-content-desc">
                                 Built MERN e-commerce platform with secure payments and tracking. Achieved 40% faster transactions.
                             </p>
-                            <a
-                                href="/ecommerce"
+                            <Link
+                                to="/ecommerce"
                                 className="btn btn--med btn--theme dynamicBgClr"
-                            >Case Study</a
                             >
+                                Case Study
+                            </Link>
                         </div>
                     </div>
                     <div className="projects__row">
@@ -90,11 +93,12 @@ const Projects = () => {
                             <p className="projects__row-content-desc">
                                 Built a restaurant management system with Node && Express stack featuring order tracking, menu management and staff scheduling.
                             </p>
-                            <a
-                                href="/restaurant"
+                            <Link
+                                to="/restaurant"
                                 className="btn btn--med btn--theme dynamicBgClr"
-                            >Case Study</a
                             >
+                                Case Study
+                            </Link>
                         </div>
                     </div>
                 </div>
