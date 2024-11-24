@@ -81,7 +81,7 @@ const Navbar = () => {
                 <div className={`header__sm-menu ${menuOpen ? 'header__sm-menu--active' : 'd-none'}`}>
                     <ul className="header__sm-menu-links">
                         <li className="header__sm-menu-link" onClick={() => handleMenuLinkClick('home')}>
-                            <a href="#home">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li className="header__sm-menu-link" onClick={() => handleMenuLinkClick('about')}>
                             <a href="#about">About</a>
