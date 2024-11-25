@@ -18,7 +18,7 @@ const Ecommarce = () => {
                             </p>
                         </div>
                         <div className="project-cs-hero__cta">
-                            <a href="#" className="btn btn--bg" target="_blank">Live Link</a>
+                        <a href="https://next-ecoshop.vercel.app/" className="btn btn--bg" target="_blank">Live Link</a>
                         </div>
                     </div>
                 </section>
@@ -54,13 +54,13 @@ const Ecommarce = () => {
                                 <div className="project-details__links" id='link'>
                                     <h3 className="project-details__content-title">See Live</h3>
                                     <a
-                                        href="#"
+                                    href="https://next-ecoshop.vercel.app/"
                                         className="btn btn--med btn--theme project-details__links-btn"
                                         target="_blank"
                                     >Live Link</a
                                     >
                                     <a
-                                        href="#"
+                                    href="https://github.com/Ayush8709"
                                         className="btn btn--med btn--theme-inv project-details__links-btn"
                                         target="_blank"
                                     >Code Link</a
