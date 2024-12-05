@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import car_rental from '../../public/assets/jpeg/car_rental.jpg'
+import coffe from '../../public/assets/jpeg/coffe.jpg'
+import ecommarce from '../../public/assets/jpeg/ecommarce.jpeg'
+import resturant from '../../public/assets/jpeg/resturant.jpg'
 
 //screen ke top par scroll karne ke liye function hai
 const scrollToTop = () => {
@@ -24,7 +28,7 @@ const Projects = () => {
                     <div className="projects__row">
                         <div className="projects__row-img-cont">
                             <img
-                                src="./assets/jpeg/project-mockup-example.jpeg"
+                                src={car_rental}
                                 alt="Software Screenshot"
                                 className="projects__row-img"
                                 loading="lazy"
@@ -47,7 +51,7 @@ const Projects = () => {
                     <div className="projects__row">
                         <div className="projects__row-img-cont">
                             <img
-                                src="./assets/jpeg/project-mockup-example.jpeg"
+                                src={coffe}
                                 alt="Software Screenshot"
                                 className="projects__row-img"
                                 loading="lazy"
@@ -70,7 +74,7 @@ const Projects = () => {
                     <div className="projects__row">
                         <div className="projects__row-img-cont">
                             <img
-                                src="./assets/jpeg/project-mockup-example.jpeg"
+                                src={ecommarce}
                                 alt="Software Screenshot"
                                 className="projects__row-img"
                                 loading="lazy"
@@ -93,7 +97,7 @@ const Projects = () => {
                     <div className="projects__row">
                         <div className="projects__row-img-cont">
                             <img
-                                src="./assets/jpeg/project-mockup-example.jpeg"
+                                src={resturant}
                                 alt="Software Screenshot"
                                 className="projects__row-img"
                                 loading="lazy"

@@ -32,7 +32,7 @@ const Footer = () => {
                                         alt="icon"
                                     />
                                 </a>
-                                <a target="_blank" rel="noreferrer" href="#">
+                                {/* <a target="_blank" rel="noreferrer" href="#">
                                     <img
                                         className="main-footer__icon"
                                         src="./assets/png/yt-ico.png"
@@ -45,7 +45,8 @@ const Footer = () => {
                                         src="./assets/png/insta-ico.png"
                                         alt="icon"
                                     />
-                                </a>
+                                </a> */}
+                               
                             </div>
                         </div>
                         <div className="main-footer__row main-footer__row-2">
@@ -59,7 +60,8 @@ const Footer = () => {
 
                     <div className="main-footer__lower">
                         &copy; Copyright 2024. Made by
-                        <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+                        {/* <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com" */}
+                        <a rel="noreferrer"  href="#"
                         >Ayush Kumar Singh</a
                         >
                     </div>

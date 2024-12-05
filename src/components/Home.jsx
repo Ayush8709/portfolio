@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Projects from './Projects';
 
+
 const App = () => {
 
     return (
@@ -42,13 +43,13 @@ const App = () => {
                             </a>
                         </div>
                         <div className="home-hero__social">
-                            <a href="#" className="home-hero__social-icon-link">
+                            {/* <a href="#" className="home-hero__social-icon-link">
                                 <img
                                     src="./assets/png/email.png"
                                     alt="icon"
                                     className="home-hero__social-icon"
                                 />
-                            </a>
+                            </a> */}
                         </div>
                         <div className="home-hero__social">
                             <a href="#" className="home-hero__social-icon-link">

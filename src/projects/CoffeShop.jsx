@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from '../projects/Navbar'
+import coffe from '../../public/assets/jpeg/coffe.jpg'
 
 const CoffeShop = () => {
     useEffect(() => {
@@ -26,7 +27,7 @@ const CoffeShop = () => {
                         <div className="project-details__content">
                             <div className="project-details__showcase-img-cont">
                                 <img
-                                    src="./assets/jpeg/project-mockup-example.jpeg"
+                                    src={coffe}
                                     alt="Project Image"
                                     className="project-details__showcase-img"
                                 />

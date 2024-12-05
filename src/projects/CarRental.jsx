@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from '../projects/Navbar'
+import car_rental from '../../public/assets/jpeg/car_rental.jpg'
 
 const CarRental = () => {
     useEffect(() => {
@@ -26,7 +27,7 @@ const CarRental = () => {
                         <div className="project-details__content">
                             <div className="project-details__showcase-img-cont">
                                 <img
-                                    src="./assets/jpeg/project-mockup-example.jpeg"
+                                    src={car_rental}
                                     alt="Project Image"
                                     className="project-details__showcase-img"
                                 />
