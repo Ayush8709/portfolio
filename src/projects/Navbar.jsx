@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
                     <div className="header__main">
                         <ul className="header__links">
                             <li className="header__link-wrapper">
-                                <a href="/" className="header__link" onClick={() => handleMenuLinkClick('home')}>Home</a>
+                                <Link to="/" className="header__link" onClick={() => handleMenuLinkClick('home')}>Home</Link>
                             </li>
                             <li className="header__link-wrapper">
                                 <a href="#overview" className="header__link" onClick={() => handleMenuLinkClick('overview')}>Overview</a>
@@ -82,7 +83,7 @@ const Navbar = () => {
                 <div className={`header__sm-menu ${menuOpen ? 'header__sm-menu--active' : 'd-none'}`}>
                     <ul className="header__sm-menu-links">
                         <li className="header__sm-menu-link" onClick={() => handleMenuLinkClick('home')}>
-                            <a href="/">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li className="header__sm-menu-link" onClick={() => handleMenuLinkClick('overview')}>
                             <a href="#overview">Overview</a>

@@ -5,6 +5,7 @@ import CarRental from './projects/CarRental';
 import CoffeShop from './projects/CoffeShop';
 import Ecommarce from './projects/Ecommarce';
 import Resturant from './projects/ResturantMange';
+import AiPlacement from './projects/AiPlacment';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/coffeeshop" element={<CoffeShop />} />
         <Route path="/ecommerce" element={<Ecommarce />} />
         <Route path="/restaurant" element={<Resturant />} />
+        <Route path="/aiplacement" element={<AiPlacement />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

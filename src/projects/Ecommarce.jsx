@@ -1,80 +1,158 @@
-import React, { useEffect } from 'react'
-import Navbar from '../projects/Navbar'
-import ecommarce from '../../public/assets/jpeg/ecommarce.jpeg'
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Navbar from '../projects/Navbar';
+import ecommarce from '../../public/assets/jpeg/ecommarce.jpeg';
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
+const buttonVariants = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+};
 
 const Ecommarce = () => {
-    useEffect(()=>{
-        document.title = 'Project: ecommerce';
-    })
-    return (
-        <div>
-                <Navbar />
-                <section className="project-cs-hero">
-                    <div className="project-cs-hero__content">
-                        <h1 className="heading-primary">Ecommarce</h1>
-                        <div className="project-cs-hero__info">
-                            <p className="text-primary">
-                                Built a full-stack e-commerce platform with MERN stack featuring secure payments, real-time inventory tracking, and responsive design, resulting in 40% faster transactions and 50% increase in mobile engagement.
-                            </p>
-                        </div>
-                        <div className="project-cs-hero__cta">
-                        <a href="https://next-ecoshop.vercel.app/" className="btn btn--bg" target="_blank">Live Link</a>
-                        </div>
-                    </div>
-                </section>
-                <section className="project-details" id='overview'>
-                    <div className="main-container">
-                        <div className="project-details__content">
-                            <div className="project-details__showcase-img-cont">
-                                <img
-                                    src={ecommarce}
-                                    alt="Project Image"
-                                    className="project-details__showcase-img"
-                                />
-                            </div>
-                            <div className="project-details__content-main">
-                                <div className="project-details__desc">
-                                    <h3 className="project-details__content-title">Project Overview</h3>
-                                    <p className="project-details__desc-para">
-                                        Engineered a modern e-commerce platform using <strong>Next.js</strong> and <strong>TypeScript</strong>, achieving a <strong>45% improvement</strong> in page load times through <strong>server-side rendering</strong> and <strong>static site generation</strong>. Implemented advanced features including <strong>dynamic product filtering</strong>, <strong>real-time inventory management</strong>, and <strong>responsive image optimization</strong> that enhanced the shopping experience across all devices.
+  useEffect(() => {
+    document.title = 'Project: ecommerce';
+  }, []);
 
-                                       
-                                    </p>
-                                    <p className="project-details__desc-para" id='tools'>
-                                        Integrated <strong>Stripe payment processing</strong> and <strong>secure user authentication</strong>, resulting in a <strong>99.9% transaction success rate</strong>. The platform's <strong>intuitive cart management</strong> and <strong>streamlined checkout process</strong> led to a <strong>35% reduction</strong> in cart abandonment rates. Enhanced <strong>SEO optimization</strong> and <strong>performance metrics</strong> resulted in a <strong>60% increase</strong> in organic traffic and improved search engine rankings.
-                                    </p>
-                                </div>
-                                <div className="project-details__tools-used" >
-                                    <h3 className="project-details__content-title">Technology Used</h3>
-                                    <div className="skills">
-                                        <div className="skills__skill">Next</div>
-                                        <div className="skills__skill">Mongodb</div>
-                                    </div>
-                                </div>
-                                <div className="project-details__links" id='link'>
-                                    <h3 className="project-details__content-title">See Live</h3>
-                                    <a
-                                    href="https://next-ecoshop.vercel.app/"
-                                        className="btn btn--med btn--theme project-details__links-btn"
-                                        target="_blank"
-                                    >Live Link</a
-                                    >
-                                    <a
-                                    href="https://github.com/Ayush8709"
-                                        className="btn btn--med btn--theme-inv project-details__links-btn"
-                                        target="_blank"
-                                    >Code Link</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+  return (
+    <div>
+      <Navbar />
 
+      {/* Hero Section */}
+      <motion.section
+        className="project-cs-hero"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants} className="project-cs-hero__content">
+          <motion.h1 variants={itemVariants} className="heading-primary">
+            Ecommarce
+          </motion.h1>
 
+          <motion.div variants={itemVariants} className="project-cs-hero__info">
+            <p className="text-primary">
+              Crafted a robust full-stack e-commerce platform using MERN technologies, delivering secure payments, live inventory updates, and a sleek responsive design. These features combined helped speed up transactions by 40% and boosted mobile user engagement by half.
+            </p>
+          </motion.div>
+
+          <motion.div variants={buttonVariants} className="project-cs-hero__cta">
+            <a
+              href="https://next-ecoshop.vercel.app/"
+              className="btn btn--bg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live Link
+            </a>
+          </motion.div>
+        </motion.div>
+      </motion.section>
+
+      {/* Project Details Section */}
+      <motion.section
+        className="project-details"
+        id="overview"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        style={{ marginTop: '3rem' }}
+      >
+        <div className="main-container">
+          <div className="project-details__content">
+            <motion.div
+              className="project-details__showcase-img-cont"
+              variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  transition: { duration: 0.7, ease: 'easeOut' },
+                },
+              }}
+            >
+              <img
+                src={ecommarce}
+                alt="Project Image"
+                className="project-details__showcase-img"
+              />
+            </motion.div>
+
+            <motion.div
+              className="project-details__content-main"
+              variants={containerVariants}
+            >
+              <motion.div variants={itemVariants} className="project-details__desc">
+                <motion.h3 variants={itemVariants} className="project-details__content-title">
+                  Project Overview
+                </motion.h3>
+
+                <motion.p variants={itemVariants} className="project-details__desc-para">
+                  Developed a cutting-edge e-commerce platform with Next.js and TypeScript, leveraging server-side rendering and static generation to speed up page loads by nearly half. The site features smart product filters, real-time inventory updates, and responsive images to ensure a smooth shopping experience on every device.
+                </motion.p>
+
+                <motion.p
+                  variants={itemVariants}
+                  className="project-details__desc-para"
+                  id="tools"
+                  style={{ marginTop: '1rem' }}
+                >
+                  Integrated Stripe for safe and reliable payment processing and implemented secure user authentication. This resulted in an outstanding 99.9% success rate for transactions. The simplified cart and checkout flows decreased cart abandonment by 35%, while enhanced SEO boosted organic traffic by 60%.
+                </motion.p>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="project-details__tools-used" style={{ marginTop: '2rem' }}>
+                <h3 className="project-details__content-title">Technology Used</h3>
+                <div className="skills">
+                  <div className="skills__skill">Next.js</div>
+                  <div className="skills__skill">MongoDB</div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={itemVariants}
+                className="project-details__links"
+                id="link"
+                style={{ marginTop: '2rem' }}
+              >
+                <h3 className="project-details__content-title">See Live</h3>
+                <a
+                  href="https://next-ecoshop.vercel.app/"
+                  className="btn btn--med btn--theme project-details__links-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Link
+                </a>
+                <a
+                  href="https://github.com/Ayush8709"
+                  className="btn btn--med btn--theme-inv project-details__links-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ marginLeft: '1rem' }}
+                >
+                  Code Link
+                </a>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
-    )
-}
+      </motion.section>
+    </div>
+  );
+};
 
-export default Ecommarce
+export default Ecommarce;

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../projects/Navbar';
-import coffe from '../../public/assets/jpeg/coffe.jpg';
+import placementImage from '../../public/assets/jpeg/placement.jpg'; // Make sure this image exists or update path
 
+// Animation variants
 const containerVariants = {
   hidden: {},
   visible: {
@@ -22,9 +23,9 @@ const buttonVariants = {
   visible: { scale: 1, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-const CoffeShop = () => {
+const AiPlacement = () => {
   useEffect(() => {
-    document.title = 'Project: coffee-shop';
+    document.title = 'Project: College-Placement Cell & AI Interview';
   }, []);
 
   return (
@@ -40,18 +41,19 @@ const CoffeShop = () => {
       >
         <motion.div variants={itemVariants} className="project-cs-hero__content">
           <motion.h1 variants={itemVariants} className="heading-primary">
-            Coffee Shop
+            College-Placement & AI Interview
           </motion.h1>
 
           <motion.div variants={itemVariants} className="project-cs-hero__info">
             <p className="text-primary">
-              I developed a coffee shop platform using the MERN stack, making ordering fast and easy with real-time updates. The customizable menus and secure Stripe payments helped boost mobile orders by 75%, and the loyalty rewards program improved customer retention by 40%.
+              Developed a smart campus placement portal using <strong>Next.js</strong> and <strong>Firebase</strong> with role-based dashboards. Integrated an AI-powered interview module with dynamic MCQs and instant performance feedback — improving student preparedness by over 60%.
             </p>
           </motion.div>
 
           <motion.div variants={buttonVariants} className="project-cs-hero__cta">
             <a
-              href="https://coffeshopme.netlify.app/"
+            //   href="https://github.com/Ayush8709"
+              href="https://placement-cell-ai-interview.vercel.app/"
               className="btn btn--bg"
               target="_blank"
               rel="noreferrer"
@@ -62,7 +64,7 @@ const CoffeShop = () => {
         </motion.div>
       </motion.section>
 
-      {/* Project Details Section */}
+      {/* Details Section */}
       <motion.section
         className="project-details"
         id="overview"
@@ -73,6 +75,7 @@ const CoffeShop = () => {
       >
         <div className="main-container">
           <div className="project-details__content">
+            {/* Image */}
             <motion.div
               className="project-details__showcase-img-cont"
               variants={{
@@ -85,12 +88,13 @@ const CoffeShop = () => {
               }}
             >
               <img
-                src={coffe}
-                alt="Project Image"
+                src={placementImage}
+                alt="Placement Portal Screenshot"
                 className="project-details__showcase-img"
               />
             </motion.div>
 
+            {/* Description */}
             <motion.div
               className="project-details__content-main"
               variants={containerVariants}
@@ -101,45 +105,38 @@ const CoffeShop = () => {
                 </motion.h3>
 
                 <motion.p variants={itemVariants} className="project-details__desc-para">
-                  I built this coffee shop web app using React, Express, and a NoSQL database, covering all core features. The platform lets users track their orders in real-time, customize menus easily, and enjoy a smooth ordering experience.
+                  This smart campus placement platform is designed with a student-first mindset. Using <strong>Next.js</strong> and <strong>Firebase</strong>, the system supports role-based dashboards for admins, companies, and students — ensuring streamlined workflows.
                 </motion.p>
 
-                <motion.p
-                  variants={itemVariants}
-                  className="project-details__desc-para"
-                  id="tools"
-                  style={{ marginTop: '1rem' }}
-                >
-                  With 98% mobile compatibility and responsive design, it works flawlessly on all devices. I integrated a custom Coffee API and payment gateway to cut transaction time by half, making checkout quick and user-friendly.
+                <motion.p variants={itemVariants} className="project-details__desc-para" id="tools">
+                  The AI mock interview module automatically generates <strong>MCQs</strong> tailored to each user's profile and scores them in real-time, helping students prepare better. This boosted student readiness by <strong>60%</strong> based on feedback.
                 </motion.p>
 
-                <motion.p
-                  variants={itemVariants}
-                  className="project-details__desc-para"
-                  style={{ marginTop: '1rem' }}
-                >
-                  The app is fully responsive, ensuring customers have a great experience anywhere. Features like a loyalty rewards program and automated order notifications helped boost customer retention by 90%.
+                <motion.p variants={itemVariants} className="project-details__desc-para">
+                  Automated job postings, real-time notifications, and feedback systems replaced manual efforts — reducing HR workload by <strong>70%</strong>. The platform also achieved a <strong>95%+ Lighthouse score</strong> using <strong>Tailwind CSS</strong>, ensuring speed and responsiveness.
                 </motion.p>
               </motion.div>
 
+              {/* Tools */}
               <motion.div variants={itemVariants} className="project-details__tools-used" style={{ marginTop: '2rem' }}>
-                <h3 className="project-details__content-title">Tools Used</h3>
+                <h3 className="project-details__content-title">Technology Used</h3>
                 <div className="skills">
-                  {['React', 'Bootstrap', 'Node', 'Express', 'MongoDB', 'Stripe', 'Nodemailer', 'JWT'].map(skill => (
-                    <div key={skill} className="skills__skill">{skill}</div>
+                  {['Next.js', 'Firebase', 'Tailwind CSS', 'AI Module', 'MCQ Engine'].map(tool => (
+                    <div key={tool} className="skills__skill">{tool}</div>
                   ))}
                 </div>
               </motion.div>
 
+              {/* Links */}
               <motion.div
                 variants={itemVariants}
                 className="project-details__links"
                 id="link"
                 style={{ marginTop: '2rem' }}
               >
-                <h3 className="project-details__content-title">See Live</h3>
+                <h3 className="project-details__content-title">See Code</h3>
                 <a
-                  href="https://coffeshopme.netlify.app/"
+                  href="https://placement-cell-ai-interview.vercel.app/"
                   className="btn btn--med btn--theme project-details__links-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -151,9 +148,8 @@ const CoffeShop = () => {
                   className="btn btn--med btn--theme-inv project-details__links-btn"
                   target="_blank"
                   rel="noreferrer"
-                  style={{ marginLeft: '1rem' }}
                 >
-                  Code Link
+                  GitHub Link
                 </a>
               </motion.div>
             </motion.div>
@@ -164,4 +160,4 @@ const CoffeShop = () => {
   );
 };
 
-export default CoffeShop;
+export default AiPlacement;
